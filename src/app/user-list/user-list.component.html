@@ -1,0 +1,21 @@
+
+<div class="row">
+	<div class="col-lg-10"><h2>
+	Users</h2></div>
+	<div class="col-lg-2">
+		<button (click)="createUser()">Create</button>
+	</div>
+</div>
+<ul class="list-group user-list">
+	<li class="list-group-item" *ngFor="let user of users">
+		<a (click)="showDetail(user)">
+			<h4 class="list-group-item-heading">{{user.firstName}} {{user.lastName}}</h4>
+			<p class="list-group-item-details">
+				<span>{{user.emailId}}</span>
+				<span>{{user.department}}</span>
+				<span>Roles</span>
+			</p>
+			<span class="list-icon icon-angle-right pull-right"></span>
+		</a>
+	</li>
+</ul>

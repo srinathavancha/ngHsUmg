@@ -1,0 +1,37 @@
+<div *ngIf="user">
+	<h2>{{user.firstName}} {{user.lastName}}</h2>
+	<div class="label-group">
+		<div class="label">Username</div>
+		<div class="value">{{user.username}}</div>
+	</div>
+	<div class="label-group">
+		<div class="label">First Name</div>
+		<div class="value">{{user.firstName}}</div>
+	</div>
+	<div class="label-group">
+		<div class="label">Last Name</div>
+		<div class="value">{{user.lastName}}</div>
+	</div>
+	<div class="label-group">
+		<div class="label">Gender</div>
+		<div class="value">{{user.gender}}</div>
+	</div>
+	<div class="label-group">
+		<div class="label">Email Id</div>
+		<div class="value">{{user.emailId}}</div>
+	</div>
+	<div class="label-group">
+		<div class="label">Department</div>
+		<div class="value">{{user.department}}</div>
+	</div>
+	<div class="label-group">
+		<div class="label">Roles</div>
+		<div class="value">
+			<span *ngFor="let role of user.roles">
+				{{role}}
+			</span>
+		</div>
+	</div>
+	
+
+</div>

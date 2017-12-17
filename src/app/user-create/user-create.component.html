@@ -1,0 +1,45 @@
+<!--Create form start-->
+<form (ngSubmit)="createUser(userForm)" #userForm="ngForm">
+	<div class="form-group">
+		<label for="username">Username:</label>
+		<input type="text" class="form-control" id="username" name="username" ngModel>
+	</div>
+	<div class="form-group">
+		<label for="firstName">First Name:</label>
+		<input type="text" class="form-control" id="firstName" name="firstName" ngModel>
+	</div>
+	<div class="form-group">
+		<label for="lastName">Last Name:</label>
+		<input type="text" class="form-control" id="lastName" name="lastName" ngModel>
+	</div>
+	<div class="form-group">
+		<label for="gender">Username:</label>
+		<input type="text" class="form-control" id="username" name="username" ngModel>
+	</div>
+	<div class="form-group">
+		<label for="gender">Gender:</label>
+		<label class="radio-inline"><input type="radio" name="gender" value="male" ngModel>Male</label>
+		<label class="radio-inline"><input type="radio" name="gender" value="female" ngModel>FeMale</label>
+	</div>
+	<div class="form-group">
+		<label for="emailId">Email Id:</label>
+		<input type="text" class="form-control" id="emailId" name="emailId" ngModel>
+	</div>
+	<div class="form-group">
+		<label for="department">Department:</label>
+		<select class="form-control" id="department" name="department" ngModel>
+					<!--<option default value="-1">Select one</option>-->
+					<option *ngFor="let department of departments" [value]="department.name">{{department.displayName}}</option>
+				</select>
+	</div>
+	<div class="form-group">
+		<label for="roles">Roles:</label>
+		<select class="form-control" id="roles" name="roles" ngModel multiple>
+					<option *ngFor="let role of roles" [value]="role.name">{{role.displayName}}</option>
+				</select>
+	</div>
+	<div class="button-group">
+		<button type="submit" class="btn btn-default">Submit</button>
+	</div>
+</form>
+<!--Create form end-->
